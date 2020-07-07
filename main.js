@@ -32,9 +32,14 @@ printKata(2, kata2)
 const kata3 = users.some(users => users.company === "OVATION")
 printKata(3, kata3)
 
-const kata4 = users.find(user => user.age > 38)
+const kata4 = users.find(user => user.age >= 38)
 printKata(4, kata4)
 
-const kata5 = users.filter(user => user.isActive === true)
-const kata5search = kata5.find(user => user.age > 38)
-printKata(5, kata5search)
+let kata5 = users.filter(user => user.isActive === true)
+printKata(5, kata5.find(user => user.age >= 38))
+
+let kata6 = users.filter(user => user.company = "ZENCO")
+printKata(6, kata6.map(user => user.balance))
+
+let kata7 = users.filter(user => user.tags.includes("fugiat") === true)
+printKata(7, kata7.map(user => user.age))
