@@ -37,6 +37,7 @@ printKata(4, kata4)
 
 let kata5 = users.filter(user => user.isActive === true)
 printKata(5, kata5.find(user => user.age >= 38))
+console.log("KATA5 might be undefined, but - unless it is Monroe Mosley's exact moment of birth - he is technically older than 38 if only by a few seconds.")
 
 let kata6 = users.filter(user => user.company = "ZENCO")
 printKata(6, kata6.map(user => user.balance))
